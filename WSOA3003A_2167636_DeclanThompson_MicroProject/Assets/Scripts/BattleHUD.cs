@@ -9,6 +9,8 @@ public class BattleHUD : MonoBehaviour
 {
     public Text nameText;
     public Text levelText;
+    public Text Health;
+    public Text Magic;
     public Slider HPSlider;
     public Slider MPSlider;
 
@@ -16,6 +18,8 @@ public class BattleHUD : MonoBehaviour
     {
         nameText.text = unit.Name;
         levelText.text = unit.Level;
+        Health.text = unit.maxHP.ToString();
+        Magic.text = unit.maxMP.ToString();
         HPSlider.maxValue = unit.maxHP;
         HPSlider.value = unit.currentHP;
         MPSlider.maxValue = unit.maxMP;
